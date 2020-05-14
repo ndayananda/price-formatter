@@ -1,0 +1,17 @@
+{
+  "name": "price-formatter",
+  "version": "1.0.0",
+  "description": "Price formatter allows you to format numbers as currencies by providing pattern",
+  "source": "src/index.js",
+  "main": "dist/price-formatter.js",
+  "module": "dist/price-formatter.module.js",
+  "unpkg": "dist/price-formatter.umd.js",
+  "scripts": {
+    "build": "microbundle",
+    "dev": "microbundle watch"
+  },
+  "devDependencies": {
+    "microbundle": "0.12.0"
+  },
+  "keywords": []
+}

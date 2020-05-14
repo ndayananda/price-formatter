@@ -1,0 +1,1 @@
+Price formatter allows you to format numbers as currencies by providing pattern
