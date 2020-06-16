@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Price Formatter</title>
+</head>
+<body>
+  <script type="module" src="price-formatter.module.js"></script>
+  <script type="module">
+    import PriceFormatter from './price-formatter.module.js';
+
+    var patterns = [
+      {"pattern": "{n-}#{t,}###{t,}###{t,}###{t,}###{o.}###{c ﷼}", "val": "10"},
+      {"pattern": "{c€ }{n-}#{t.}###{t.}###{t.}###{d,}##", "val": "13.50"},
+      {"pattern": "{cEUR }{n-}#{t.}###{t.}###{t.}###{d,}##", "val": "45.054"},
+      {"pattern": "{n-}#{t.}###{t.}###{t.}###{d,}##{c EUR}", "val": "-145"},
+      {"pattern": "{c€ }{n-}#{t.}###{t.}###{t.}###{d,}##", "val": "201.34"},
+      {"pattern": "{c€ }{n-}#{t.}###{t.}###{t.}###{d,}##", "val": "187.300006"},
+      {"pattern": "{c€ }{n-}#{t.}###{t.}###{t.}###{d,}##", "val": "1401"},
+      {"pattern": "{c€ }{n-}#{t.}###{t.}###{t.}###{d,}##", "val": "1199.1"},
+      {"pattern": "{c€ }{n-}#{t.}###{t.}###{t.}###{d,}##", "val": "-2002.123"},
+      {"pattern": "{c€ }{n-}#{t.}###{t.}###{t.}###{d,}##", "val": "12500"},
+      {"pattern": "{c€ }{n-}#{t.}###{t.}###{t.}###{d,}##", "val": "22500.34"},
+      {"pattern": "{c€ }{n-}#{t.}###{t.}###{t.}###{d,}##", "val": "65743.678"},
+      {"pattern": "{c€ }{n-}#{t.}###{t.}###{t.}###{d,}##", "val": "545221"},
+      {"pattern": "{c€ }{n-}#{t.}###{t.}###{t.}###{d,}##", "val": "-132333.98"},
+      {"pattern": "{c€ }{n-}#{t.}###{t.}###{t.}###{d,}##", "val": "9876543210.1234"},
+      {"pattern": "{c€ }{n-}#{t.}###{t.}###{t.}###{o,}##", "val": "10"},
+      {"pattern": "{c€ }{n-}#{t.}###{t.}###{t.}###{o,}##", "val": "13.50"},
+      {"pattern": "{cEUR }{n-}#{t.}###{t.}###{t.}###{o,}##", "val": "45.054"},
+      {"pattern": "{n-}#{t.}###{t.}###{t.}###{o,}##{c EUR}", "val": "-145"},
+      {"pattern": "{c€ }{n-}#{t.}###{t.}###{t.}###{o,}##", "val": "201.34"},
+      {"pattern": "{c€ }{n-}#{t.}###{t.}###{t.}###{o,}##", "val": "187.300006"},
+      {"pattern": "{c€ }{n-}#{t.}###{t.}###{t.}###{o,}##", "val": "1401"},
+      {"pattern": "{c€ }{n-}#{t.}###{t.}###{t.}###{o,}##", "val": "1199.1"},
+      {"pattern": "{c€ }{n-}#{t.}###{t.}###{t.}###{o,}##", "val": "-2002.123"},
+      {"pattern": "{c€ }{n-}#{t.}###{t.}###{t.}###{o,}##", "val": "12500"},
+      {"pattern": "{c€ }{n-}#{t.}###{t.}###{t.}###{o,}##", "val": "22500.34"},
+      {"pattern": "{c€ }{n-}#{t.}###{t.}###{t.}###{o,}##", "val": "65743.678"},
+      {"pattern": "{c€ }{n-}#{t.}###{t.}###{t.}###{o,}##", "val": "545221"},
+      {"pattern": "{c€ }{n-}#{t.}###{t.}###{t.}###{o,}##", "val": "-132333.98"},
+      {"pattern": "{c€ }{n-}#{t.}###{t.}###{t.}###{o,}##", "val": "9876543210.1234"}];
+
+    console.table(patterns.reduce((acc, {pattern, val}) => [...acc, [pattern, val, new PriceFormatter(pattern).format(val)]], []));
+  </script>
+</body>
+</html>
