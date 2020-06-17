@@ -1,19 +1,30 @@
 {
   "name": "price-formatter",
   "version": "1.0.0",
-  "description": "Price formatter allows you to format numbers as currencies by providing pattern",
+  "description": "Price formatter allows you to format a float value representing price by providing pattern. Pattern example {cCUR }{n-}#{t,}##{t,}###{t,}##{t,}##(t,}###{d.}##",
   "source": "src/index.js",
   "main": "dist/price-formatter.js",
   "module": "dist/price-formatter.module.js",
+  "esmodule": "dist/price-formatter.modern.js",
   "unpkg": "dist/price-formatter.umd.js",
   "scripts": {
     "build": "microbundle",
     "dev": "microbundle watch",
-    "test": "jest --watch"
+    "test": "jest",
+    "test:watch": "jest watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ndayananda/price-formatter.git"
   },
   "devDependencies": {
     "jest": "^26.0.1",
     "microbundle": "0.12.0"
   },
-  "keywords": []
+  "keywords": [
+    "price formatter",
+    "currency formatter"
+  ],
+  "author": "Naveen Dayananda <ad.naveen@outlook.com>",
+  "license": "MIT"
 }
