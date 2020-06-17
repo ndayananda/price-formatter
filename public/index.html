@@ -4,13 +4,59 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Price Formatter</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
 </head>
 <body>
+  <nav class="bd-navbar navbar has-shadow is-spaced" role="navigation" aria-label="main navigation">
+    <div class="container">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="/">
+          <h1 class="title">Price Formatter</h1>
+        </a>
+
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h3 id="variables" class="title is-4 pt-5">
+      <span class="bd-anchor-name">
+        Samples
+      </span>
+    </h3>
+    <table class="table is-bordered is-striped is-narrow is-hoverable">
+      <thead>
+        <tr>
+          <th>Pattern</th>
+          <th>Value</th>
+          <th>Formatted Price</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <footer class="footer mt-6">
+    <div class="container">
+      <div class="content has-text-centered">
+        <p>
+          <strong>Price Formatter</strong> by <a href="https://www.linkedin.com/in/naveendayananda/">Naveen Dayananda</a>. The source code is licensed
+          <a href="http://opensource.org/licenses/mit-license.php">MIT</a>.
+        </p>
+      </div>
+    </div>
+  </footer>
+
   <script type="module" src="price-formatter.module.js"></script>
   <script type="module">
     import PriceFormatter from './price-formatter.module.js';
 
-    var patterns = [
+    const patterns = [
       {"pattern": "{n-}#{t,}###{t,}###{t,}###{t,}###{o.}###{c ﷼}", "val": "10"},
       {"pattern": "{c€ }{n-}#{t.}###{t.}###{t.}###{d,}##", "val": "13.50"},
       {"pattern": "{cEUR }{n-}#{t.}###{t.}###{t.}###{d,}##", "val": "45.054"},
@@ -42,7 +88,10 @@
       {"pattern": "{c€ }{n-}#{t.}###{t.}###{t.}###{o,}##", "val": "-132333.98"},
       {"pattern": "{c€ }{n-}#{t.}###{t.}###{t.}###{o,}##", "val": "9876543210.1234"}];
 
-    console.table(patterns.reduce((acc, {pattern, val}) => [...acc, [pattern, val, new PriceFormatter(pattern).format(val)]], []));
+    const tbody  = document.querySelector('.table tbody'),
+      tableContent = patterns.reduce((acc, {pattern, val}) => acc + `<tr><td>${pattern}</td><td>${val}</td><td>${new PriceFormatter(pattern).format(val)}</td></tr>`, ``);
+
+    tbody.innerHTML = tableContent;
   </script>
 </body>
 </html>
