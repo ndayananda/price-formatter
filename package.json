@@ -1,5 +1,5 @@
 {
-  "name": "@ndayananda/price-formatter",
+  "name": "@currency/price-formatter",
   "version": "1.0.0",
   "description": "Price formatter allows you to format a float value representing price by providing pattern. Pattern example {cCUR }{n-}#{t,}##{t,}###{t,}##{t,}##(t,}###{d.}##",
   "source": "src/index.js",
