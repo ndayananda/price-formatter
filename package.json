@@ -1,7 +1,7 @@
 {
   "name": "@currency-formatter/price-formatter",
   "version": "1.0.0",
-  "description": "Price formatter allows you to format a float value representing price by providing pattern. Pattern example {cCUR }{n-}#{t,}##{t,}###{t,}##{t,}##(t,}###{d.}##",
+  "description": "A simple, lightweight JavaScript API to format price. Price formatter allows you to format a float value representing price by providing pattern. Pattern example {cCUR }{n-}#{t,}##{t,}###{t,}##{t,}##(t,}###{d.}##",
   "source": "src/index.js",
   "main": "dist/price-formatter.js",
   "module": "dist/price-formatter.module.js",
@@ -13,6 +13,8 @@
     "test": "jest",
     "test:watch": "jest watch"
   },
+  "bundleDependencies": false,
+  "deprecated": false,
   "repository": {
     "type": "git",
     "url": "https://github.com/ndayananda/price-formatter.git"
@@ -23,8 +25,20 @@
   },
   "keywords": [
     "price formatter",
-    "currency formatter"
+    "currency formatter",
+    "price",
+    "currency",
+    "formatter",
+    "format"
   ],
-  "author": "Naveen Dayananda <ad.naveen@outlook.com>",
+  "files": [
+    "src",
+    "dist"
+  ],
+  "homepage": "https://github.com/ndayananda/price-formatter#readme",
+  "author": {
+    "name": "Naveen Dayananda",
+    "email": "ad.naveen@outlook.com"
+  },
   "license": "MIT"
 }
