@@ -11,7 +11,9 @@
     "build": "microbundle",
     "dev": "microbundle watch",
     "test": "jest",
-    "test:watch": "jest watch"
+    "test:watch": "jest watch",
+    "prepare": "npm run build",
+    "release": "npm run prepare && git commit -am $npm_package_version && git tag $npm_package_version && git push && git push --tags && npm publish"
   },
   "bundleDependencies": false,
   "deprecated": false,

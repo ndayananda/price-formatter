@@ -1,7 +1,18 @@
 <h1 align="center">
 	Price Formatter (Currency Formatter)
 </h1>
-<p align="center">The Price Formatter library is exported as a CommonJS/ESM/Modern/UMD module.</p>
+<p align="center">
+	A simple, lightweight JavaScript API to format price with custom pattern.
+</p>
+
+- Works in all browsers
+- Accepts custom pattern
+- Heavily tested
+- No dependency
+- Supports ES modules
+- Supports AMD/CommonJS
+- Supports Modern/UMD module
+- Supports UMD module
 
 ---
 
@@ -18,12 +29,12 @@
 ## ✨ Features <a name="features"></a>
 - **One dependency** to convert float value representing price by providing pattern.
 - Customize price by different patterns
-- Use same pattern to format the price throught the application
+- Use same pattern to format the price throughout the application
 - Generic pattern with flexibility to use currency symbol/code, optional decimal
 
 ## 🔧 Installation <a name="installation"></a>
 
-1️⃣ **Install** by running: `npm i --save price-formatter`
+1️⃣ **Install** by running: `npm i --save @currency-formatter/price-formatter`
 
 ## 📦 Pattern <a name="Pattern"></a>
 ```js
