@@ -1,6 +1,6 @@
 {
   "name": "@currency-formatter/price-formatter",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A simple, lightweight JavaScript API to format price. Price formatter allows you to format a float value representing price by providing pattern. Pattern example {cCUR }{n-}#{t,}##{t,}###{t,}##{t,}##(t,}###{d.}##",
   "source": "src/index.js",
   "main": "dist/price-formatter.js",
